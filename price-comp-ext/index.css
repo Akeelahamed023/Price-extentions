@@ -1,0 +1,25 @@
+body {
+  min-width: 800px;
+}
+
+.head {
+  color: #004e92;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+
+.head-2 {
+  color: #000428;
+  font-weight: 700;
+  margin-left: 5rem;
+}
+
+select {
+  width: 30%;
+}
+
+table {
+  margin-top: 1rem;
+  font-size: 1rem;
+}

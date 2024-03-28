@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Call Example</title>
+</head>
+<body>
+  <h1>URL Call Example</h1>
+
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Price</th>
+        <th>Link</th>
+        <th>Category</th>
+        <th>Brand</th>
+        <th>Model</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    fetch('http://127.0.0.1:8000/api/all/')
+      .then(response => response.json())
+      .then(data => {
+        // Get the table body element
+        const tableBody = document.querySelector('#data-table tbody');
+
+        // Iterate over the data and create table rows
+        data.forEach(item => {
+          // Create a new row
+          const row = document.createElement('tr');
+
+          // Create cells and populate with data
+          const idCell = document.createElement('td');
+          idCell.textContent = item.id;
+          row.appendChild(idCell);
+
+          const priceCell = document.createElement('td');
+          priceCell.textContent = item.price;
+          row.appendChild(priceCell);
+
+          const linkCell = document.createElement('td');
+          linkCell.textContent = item.link;
+          row.appendChild(linkCell);
+
+          const categoryCell = document.createElement('td');
+          categoryCell.textContent = item.Category;
+          row.appendChild(categoryCell);
+
+          const brandCell = document.createElement('td');
+          brandCell.textContent = item.brand;
+          row.appendChild(brandCell);
+
+          const modelCell = document.createElement('td');
+          modelCell.textContent = item.model;
+          row.appendChild(modelCell);
+
+          // Append the row to the table body
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => {
+        // Handle any errors during the fetch request
+        console.error('Error:', error);
+      });
+  </script>
+</body>
+</html>

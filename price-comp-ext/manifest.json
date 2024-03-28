@@ -1,0 +1,11 @@
+{
+    "name": "Price Comparison",
+    "version": "2.1.1",
+    "description": "Latest Mobile Phone Price",
+    "manifest_version": 3,
+    "author": "Akeel",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Price Comparison"    
+    }
+}

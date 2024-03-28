@@ -1,0 +1,11 @@
+{
+    "name": "Price Comparison",
+    "version": "1.0.0",
+    "description": "Latest Mobile Phone Price",
+    "manifest_version": 3,
+    "author": "Shelu",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Price Comparison"    
+    }
+}
